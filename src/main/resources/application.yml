@@ -10,6 +10,7 @@ spring:
     password: a123456
     host: 192.168.0.106
     port: 6379
+    database: 0
 logging:
   level:
     com.example: debug
