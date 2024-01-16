@@ -11,4 +11,7 @@ public interface ItemService extends IService<Item> {
      * @return 剩余库存
      */
     Integer minusCount(String id,Integer count);
+
+    Integer minusCountAsync(String id,Integer count);
+
 }

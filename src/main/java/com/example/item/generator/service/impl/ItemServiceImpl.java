@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.item.generator.domain.Item;
 import com.example.item.generator.mapper.ItemMapper;
 import com.example.item.generator.service.ItemService;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 
@@ -12,6 +13,12 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements It
 
     @Override
     public Integer minusCount(String id, Integer count) {
+        return getBaseMapper().minusCount(id, count);
+    }
+
+    @Override
+    @Async
+    public Integer minusCountAsync(String id, Integer count) {
         return getBaseMapper().minusCount(id, count);
     }
 }
