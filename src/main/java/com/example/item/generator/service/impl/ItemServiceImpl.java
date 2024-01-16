@@ -10,4 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements ItemService {
 
+    @Override
+    public Integer minusCount(String id, Integer count) {
+        return getBaseMapper().minusCount(id, count);
+    }
 }

@@ -15,4 +15,10 @@
         id,remark,updated_at,
         created_at
     </sql>
+
+    <update id="minusCount">
+        update item set count = count - #{count}
+        where  count > -#{count}
+        and id = #{id}
+    </update>
 </mapper>

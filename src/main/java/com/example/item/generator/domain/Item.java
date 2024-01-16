@@ -23,6 +23,11 @@ public class Item implements Serializable {
     private String remark;
 
     /**
+     * 库存
+     */
+    private Integer count;
+
+    /**
      * 更新时间
      */
     private Date updatedAt;
