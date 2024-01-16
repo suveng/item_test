@@ -12,6 +12,6 @@ public interface ItemService extends IService<Item> {
      */
     Integer minusCount(String id,Integer count);
 
-    Integer minusCountAsync(String id,Integer count);
+    void minusCountAsync(String id,Integer count);
 
 }

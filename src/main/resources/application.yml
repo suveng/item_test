@@ -3,12 +3,12 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.0.103:3306/item
+    url: jdbc:mysql://192.168.0.106:3306/item
     username: root
     password: a123456
   redis:
     password: a123456
-    host: localhost
+    host: 192.168.0.106
     port: 6379
 logging:
   level:

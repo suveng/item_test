@@ -18,7 +18,7 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper, Item> implements It
 
     @Override
     @Async
-    public Integer minusCountAsync(String id, Integer count) {
-        return getBaseMapper().minusCount(id, count);
+    public void minusCountAsync(String id, Integer count) {
+        getBaseMapper().minusCount(id, count);
     }
 }
